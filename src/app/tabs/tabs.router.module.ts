@@ -24,7 +24,7 @@ const routes: Routes = [
             loadChildren: '../produto/add/add.module#AddPageModule'
           },
           {
-            path: '',
+            path: ':id',
             loadChildren: '../produto/edit/edit.module#EditPageModule'
           }
         ]

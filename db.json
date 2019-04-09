@@ -1,12 +1,12 @@
 {
   "produtos": [
     {
-      "id": 1,
-      "nome": "Comida",
-      "descricao": "seila",
-      "quant": 0,
-      "valor": 0,
-      "ativo": true
+      "ativo": true,
+      "nome": "Opa",
+      "descricao": "Vai",
+      "quant": 111,
+      "valor": 10,
+      "id": 1
     }
   ]
 }

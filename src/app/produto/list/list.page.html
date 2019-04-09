@@ -15,15 +15,13 @@
     </ion-item-options>
     <ion-item>
       <ion-avatar slot="start">
-        <img
-          src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
-        />
+        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
       </ion-avatar>
       <ion-label>
-        
-        <ion-note>
-          <p></p>
-        </ion-note>
+        Nome: {{ c.nome }} <br>
+        Descrição: {{ c.descricao }} <br>
+        Quantidade: {{ c.quant }} <br>
+        Valor: {{ c.valor }}
       </ion-label>
     </ion-item>
     <ion-item-options side="start">
@@ -36,12 +34,7 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
-    <ion-refresher-content
-      pullingIcon="arrow-down"
-      pullingText=""
-      refreshingSpinner="crescent"
-      refreshingText=""
-    >
+    <ion-refresher-content pullingIcon="arrow-down" pullingText="" refreshingSpinner="crescent" refreshingText="">
     </ion-refresher-content>
   </ion-refresher>
 </ion-content>

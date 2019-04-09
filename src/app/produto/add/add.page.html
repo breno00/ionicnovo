@@ -7,30 +7,30 @@
 </ion-header>
 
 <ion-content>
-  <form>
+  <form #fc="ngForm" (ngSubmit)="formDados(fc)">
     <!-- Inputs with labels -->
     <ion-item>
-      <ion-label position="floating">Nome</ion-label>
-      <ion-input [(ngModel)]="produto.nome" name="nome"></ion-input>
+      <ion-label position="floating">Nome do Produto</ion-label>
+      <ion-input [(ngModel)]="produto.nome" name="nome" required></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Descrição</ion-label>
-      <ion-input [(ngModel)]="produto.descricao"></ion-input>
+      <ion-input [(ngModel)]="produto.descricao" name="descricao" required></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Quantidade</ion-label>
-      <ion-input [(ngModel)]="produto.quant"></ion-input>
+      <ion-input [(ngModel)]="produto.quant" type="number" name="quant" required></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Valor</ion-label>
-      <ion-input [(ngModel)]="produto.valor"></ion-input>
+      <ion-input [(ngModel)]="produto.valor" type="number" name="valor" required></ion-input>
     </ion-item>
 
     <ion-row padding-top>
-      <ion-button type="submit">Salvar </ion-button>
+      <ion-button type="submit" [disabled]="!fc.valid">Salvar </ion-button>
       <ion-button type="reset">Limpar </ion-button>
     </ion-row>
   </form>

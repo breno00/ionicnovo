@@ -20,7 +20,7 @@ export class AddPage implements OnInit {
     private router: Router,
     public alertController: AlertController,
     private tabs: TabsPage
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.produto = new Produto();
@@ -28,6 +28,7 @@ export class AddPage implements OnInit {
 
   formDados(form) {
     if (form.valid) {
+      this.addProduto(this.produto) ? form.reset() : "";
     }
   }
 
